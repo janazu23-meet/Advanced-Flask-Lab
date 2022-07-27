@@ -20,12 +20,11 @@ posts = {
     "https://pbs.twimg.com/media/FI_UkcnVIAAUvWN?format=jpg&name=medium": "2020 cohort in their Y1 summer!"}
 
 
+@app.route('/')
+def first():
+    return render_template('index.html', image_link = image_link, user_bio = user_bio, posts= posts)
 #####
 
-
-@app.route('/')  # '/' for the default page
-def home():
-    return render_template('index.html')
 
 
 @app.route('/about')  # '/' for the default page
